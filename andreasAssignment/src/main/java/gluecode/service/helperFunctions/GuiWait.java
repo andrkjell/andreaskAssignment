@@ -12,7 +12,7 @@ public class GuiWait {
 
     private GuiWebDriverWrapper guiWebDriverWrapper;
 
-    GuiWait{GuiWebDriverWrapper guiWebDriverWrapper}{
+  public GuiWait(GuiWebDriverWrapper guiWebDriverWrapper){
         this.guiWebDriverWrapper = guiWebDriverWrapper;
     }
 
@@ -25,6 +25,6 @@ public class GuiWait {
         } catch (Exception e) {
             throw new AssertionError("The text " + guiEnums + " was not loaded in 60 seconds. \n" + e);
         }
-        return webDriverWait.until()
+
     }
 }
