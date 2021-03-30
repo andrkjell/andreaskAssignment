@@ -44,7 +44,6 @@ public class GuiWebDriverWrapper {
 
         manageWebDrive();
 
-        driver.get("https://www.google.com");
     }
 
     public WebDriver getDriver() {

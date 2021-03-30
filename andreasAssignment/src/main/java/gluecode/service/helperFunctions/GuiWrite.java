@@ -7,7 +7,7 @@ public class GuiWrite {
 
     private GuiWait guiWait;
 
-    GuiWrite(GuiWait guiWait){
+    public GuiWrite(GuiWait guiWait){
         this.guiWait = guiWait;
 
     }
