@@ -8,7 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-
 public class GuiWebDriverWreapper {
 
     private WebDriver driver = null;
@@ -44,6 +43,8 @@ public class GuiWebDriverWreapper {
 
 
         manageWebDrive();
+
+        driver.get("https://www.google.com");
     }
 
     public WebDriver getDriver() {
