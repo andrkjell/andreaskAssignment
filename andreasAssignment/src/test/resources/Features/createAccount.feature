@@ -18,7 +18,7 @@ Feature: Create Account
 
     Examples:
       | valid |
-      | valid |
+      | VALID |
 
   Scenario Outline: create a user invalid information
     When enter <email> email
@@ -30,6 +30,6 @@ Feature: Create Account
 
     Examples:
       | email   | username | error            |
-      | valid   | invalid  | username to long |
-      | valid   | taken    | username taken   |
-      | invalid | valid    | email missing    |
+      | VALID   | INVALID  | username to long |
+      | VALID   | TAKEN    | username taken   |
+      | INVALID | VALID    | email missing    |

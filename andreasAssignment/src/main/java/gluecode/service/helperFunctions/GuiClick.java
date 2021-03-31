@@ -3,28 +3,24 @@ package gluecode.service.helperFunctions;
 import gluecode.enums.GuiEnums;
 import org.openqa.selenium.WebElement;
 
-public class GuiRead {
+public class GuiClick {
 
     private GuiWait guiWait;
     private GuiWebDriverWrapper guiWebDriverWrapper;
 
-    public GuiRead(GuiWait guiWait, GuiWebDriverWrapper guiWebDriverWrapper){
+    public GuiClick(GuiWait guiWait, GuiWebDriverWrapper guiWebDriverWrapper){
 
         this.guiWait = guiWait;
         this.guiWebDriverWrapper = guiWebDriverWrapper;
     }
 
-    public String getTextFromElementID(GuiEnums guiEnums){
+    public void clickElementID(GuiEnums guiEnums){
         WebElement element = guiWait.waitAnderAssetElementExistInOneMinuteID(guiEnums);
-        return  element.getText();
+        element.click();
     }
-    public String getTextFromElementXPATH(GuiEnums guiEnums){
+    public void clickElementXPATH(GuiEnums guiEnums){
         WebElement element = guiWait.waitAnderAssetElementExistInOneMinuteXPATH(guiEnums);
-        return  element.getText();
-    }
-
-    public String getUrlOnPage() {
-        return guiWebDriverWrapper.getDriver().getCurrentUrl();
+        element.click();
     }
 
 }

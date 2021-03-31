@@ -11,8 +11,12 @@ public class GuiWrite {
         this.guiWait = guiWait;
 
     }
-    public void writeInElement(GuiEnums guiEnums, String inputText){
-        WebElement element = guiWait.waitAnderAssetElementExistInOneMinute(guiEnums);
+    public void writeInElementID(GuiEnums guiEnums, String inputText) {
+        WebElement element = guiWait.waitAnderAssetElementExistInOneMinuteID(guiEnums);
+        element.sendKeys(inputText);
+    }
+    public void writeInElementXPATH(GuiEnums guiEnums, String inputText){
+        WebElement element = guiWait.waitAnderAssetElementExistInOneMinuteXPATH(guiEnums);
         element.sendKeys(inputText);
 
     }

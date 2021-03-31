@@ -14,12 +14,18 @@ public class GuiWebDriverWrapper {
 
     public void createDriver(GuiBrowser browser) {
 
+        String pathToWebDriver = "C:\\Users\\Kjell\\eclipse\\java-2020-12\\eclipse\\addons\\";
+        if (pathToWebDriver == null){
+
+            throw new IllegalStateException("ne Staffan, du måste definera din path först");
+        }
+
         checkIfWebDriverIsStartedANdIgnoreErrors();
 
         try {
             switch (browser) {
                 case CHROME:
-                    System.setProperty("webdriver.chrome.driver", "C:\\Users\\Kjell\\eclipse\\java-2020-12\\eclipse\\addons\\chromedriver.exe");
+                    System.setProperty("webdriver.chrome.driver", pathToWebDriver + "chromedriver.exe");
 
                     driver = new ChromeDriver();
                     break;

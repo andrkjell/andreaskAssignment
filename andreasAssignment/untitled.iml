@@ -83,7 +83,9 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.3.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.3.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.3.4" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:cucumber-picocontainer:6.9.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.picocontainer:picocontainer:2.15" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:cucumber-picocontainer:6.9.1" level="project" />
+    <orderEntry type="library" name="Maven: org.picocontainer:picocontainer:2.15" level="project" />
+    <orderEntry type="library" name="Maven: org.assertj:assertj-core:3.8.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.12.0" level="project" />
   </component>
 </module>

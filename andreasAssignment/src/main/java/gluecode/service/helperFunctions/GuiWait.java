@@ -16,7 +16,7 @@ public class GuiWait {
         this.guiWebDriverWrapper = guiWebDriverWrapper;
     }
 
-    public WebElement waitAnderAssetElementExistInOneMinute(GuiEnums guiEnums){
+    public WebElement waitAnderAssetElementExistInOneMinuteID(GuiEnums guiEnums){
 
         WebDriverWait webDriverWait = new WebDriverWait(guiWebDriverWrapper.getDriver(), Duration.ofSeconds(60).getSeconds());
 
@@ -27,4 +27,16 @@ public class GuiWait {
         }
 
     }
+    public WebElement waitAnderAssetElementExistInOneMinuteXPATH(GuiEnums guiEnums){
+
+        WebDriverWait webDriverWait = new WebDriverWait(guiWebDriverWrapper.getDriver(), Duration.ofSeconds(60).getSeconds());
+
+        try {
+            return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(guiEnums.getGuiEnums())));
+        } catch (Exception e) {
+            throw new AssertionError("The text " + guiEnums + " was not loaded in 60 seconds. \n" + e);
+        }
+
+    }
 }
+
