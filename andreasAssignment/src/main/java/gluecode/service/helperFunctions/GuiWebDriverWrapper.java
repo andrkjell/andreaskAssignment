@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class GuiWebDriverWrapper {
 
     private WebDriver driver = null;
-
+//här har jag skapat en metod som skickar ett enkelt felmeddelande ifall man har fel path till sin webdriver.
     public void createDriver(GuiBrowser browser) {
 
         String pathToWebDriver = "C:\\Users\\Kjell\\eclipse\\java-2020-12\\eclipse\\addons\\";

@@ -8,7 +8,7 @@ Feature: Create Account
     And header text is correct
 
 
-  Scenario Outline: create a user -- happy flow
+  Scenario Outline: create a user -- succeded registration
     When enter <valid> email
     And enter <valid> username
     And enter password
