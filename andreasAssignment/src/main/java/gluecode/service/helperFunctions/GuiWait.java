@@ -16,7 +16,7 @@ public class GuiWait {
         this.guiWebDriverWrapper = guiWebDriverWrapper;
     }
 
-    public WebElement waitAnderAssetElementExistInOneMinuteID(GuiEnums guiEnums){
+    public WebElement waitAndAssetElementExistInOneMinuteID(GuiEnums guiEnums){
 
         WebDriverWait webDriverWait = new WebDriverWait(guiWebDriverWrapper.getDriver(), Duration.ofSeconds(60).getSeconds());
 
@@ -27,7 +27,7 @@ public class GuiWait {
         }
 
     }
-    public WebElement waitAnderAssetElementExistInOneMinuteXPATH(GuiEnums guiEnums){
+    public WebElement waitAndAssetElementExistInOneMinuteXPATH(GuiEnums guiEnums){
 
         WebDriverWait webDriverWait = new WebDriverWait(guiWebDriverWrapper.getDriver(), Duration.ofSeconds(60).getSeconds());
 

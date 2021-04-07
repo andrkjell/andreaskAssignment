@@ -15,11 +15,11 @@ public class GuiRead {
     }
 
     public String getTextFromElementID(GuiEnums guiEnums){
-        WebElement element = guiWait.waitAnderAssetElementExistInOneMinuteID(guiEnums);
+        WebElement element = guiWait.waitAndAssetElementExistInOneMinuteID(guiEnums);
         return  element.getText();
     }
     public String getTextFromElementXPATH(GuiEnums guiEnums){
-        WebElement element = guiWait.waitAnderAssetElementExistInOneMinuteXPATH(guiEnums);
+        WebElement element = guiWait.waitAndAssetElementExistInOneMinuteXPATH(guiEnums);
         return  element.getText();
     }
 

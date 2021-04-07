@@ -15,7 +15,7 @@ public class GuiClick {
     }
 
     public void clickElementID(GuiEnums guiEnums){
-        WebElement element = guiWait.waitAnderAssetElementExistInOneMinuteID(guiEnums);
+        WebElement element = guiWait.waitAndAssetElementExistInOneMinuteID(guiEnums);
         element.click();
     }
 }
