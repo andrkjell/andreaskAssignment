@@ -105,7 +105,7 @@ public class GuiSelenium {
         }else if (obj.equals("email missing")){
             verifyEmailMissing();
         }else{
-        throw new IllegalStateException("PLACEHOLDER");
+        throw new IllegalStateException("error");
         }
     }
 
@@ -118,9 +118,9 @@ public class GuiSelenium {
     }
 
     private void verifyEmailOnSuccessPage() {
-        String textOnCurrectPage = guiRead.getTextFromElementID(GuiEnums.SIGNUP_CONTENT_ID);
-        assertThat(textOnCurrectPage).as("Page did not include correct email").containsIgnoringCase(GuiEnums.EMAIL.getGuiEnums());
-        assertThat(textOnCurrectPage).as("Page did not include correct header").containsIgnoringCase(GuiEnums.SUCCESS_PAGE_HEADER_TEXT.getGuiEnums());
+        String textOnCurrentPage = guiRead.getTextFromElementID(GuiEnums.SIGNUP_CONTENT_ID);
+        assertThat(textOnCurrentPage).as("Page did not include correct email").containsIgnoringCase(GuiEnums.EMAIL.getGuiEnums());
+        assertThat(textOnCurrentPage).as("Page did not include correct header").containsIgnoringCase(GuiEnums.SUCCESS_PAGE_HEADER_TEXT.getGuiEnums());
     }
     private void verifyUsernameToLongError(){
     String usernameErrorText = guiRead.getTextFromElementXPATH(GuiEnums.INVALID_USERNAME_ERROR_XPATH);
