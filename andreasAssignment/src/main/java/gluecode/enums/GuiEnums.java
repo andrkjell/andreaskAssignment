@@ -12,6 +12,7 @@ public enum GuiEnums {
     ENTER_USERNAME_ID("new_username"),
     ENTER_PASSWORD_ID("new_password"),
     SIGN_UP_BUTTON_ID("create-account"),
+    COOKIE_ID("onetrust-accept-btn-handler"),
     //    get text path IDs
     WELCOME_HEADER_XPATH("/html/body/div[2]/div[1]/div/main/div/div/h1"),
     INVALID_EMAIL_ERROR_XPATH("/html/body/div[2]/div[1]/div/main/div[2]/div/form/fieldset/div[1]/div/span"),

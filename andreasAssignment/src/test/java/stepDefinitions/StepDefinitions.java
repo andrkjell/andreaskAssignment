@@ -62,18 +62,19 @@ public final class StepDefinitions {
 
     }
 
-    @And("^verify you are on completed signup page")
-    public void verifyYouAreOnCompletedSignupPage() {
-        guiSelenium.verifyYouAreOnCompletedSignupPage();
-    }
 
     @And("^close browser")
     public void closeBrowser() {
         guiWebDriverWrapper.closeDriver();
     }
 
-    @And("^verify error (.*?)")
-    public void verifyError(String obj) {
-        guiSelenium.verifyError(obj);
+    @And("^verify event (.*?)")
+    public void verifyEvent(String obj) {
+        guiSelenium.verifyEvent(obj);
+    }
+
+    @And("we accept cookies")
+    public void weAcceptCookies() {
+        guiSelenium.verifyCookies();
     }
 }

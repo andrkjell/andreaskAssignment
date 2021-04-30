@@ -91,24 +91,37 @@ public class GuiSelenium {
 
     }
 
-    public void verifyYouAreOnCompletedSignupPage() {
+    private void verifyYouAreOnCompletedSignupPage() {
         verifyURLSuccessPage();
         verifyEmailOnSuccessPage();
     }
 
 
-    public void verifyError(String obj){
+    public void verifyEvent(String obj){
         if(obj.equals("username to long")){
             verifyUsernameToLongError();
         }else if(obj.equals("username taken")){
             verifyUserNameTaken();
         }else if (obj.equals("email missing")){
             verifyEmailMissing();
-        }else{
+        } else if (obj.equals("signup page")) {
+        verifyYouAreOnCompletedSignupPage();
+    }
+        else{
         throw new IllegalStateException("error");
         }
     }
 
+    public void verifyCookies(){
+        //Datorn är för snabb för att använda någonting annat än Thread.sleep för mig, annars dyker cookies upp igen.
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        guiClick.clickElementID(GuiEnums.COOKIE_ID);
+
+    }
 
     private void verifyURLSuccessPage() {
         String currentURL = guiRead.getUrlOnPage();
